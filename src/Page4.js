@@ -28,25 +28,37 @@ export default class Page4 extends Component {
 
     calPop = () => {
         this.setState({
-            cal_open: !this.state.cal_open
+            cal_open: !this.state.cal_open,
+            contacts_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     contactsPop = () => {
         this.setState({
-            contacts_open: !this.state.contacts_open
+            contacts_open: !this.state.contacts_open,
+            cal_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     notesPop = () => {
         this.setState({
-            notes_open: !this.state.notes_open
+            notes_open: !this.state.notes_open,
+            cal_open: false,
+            contacts_open: false,
+            help_open: false,
         });
     };
 
     helpPop = () => {
         this.setState({
-            help_open: !this.state.help_open
+            help_open: !this.state.help_open,
+            cal_open: false,
+            contacts_open: false,
+            notes_open: false,
         });
     };
 
@@ -70,6 +82,9 @@ export default class Page4 extends Component {
     check_Loc = (event) => {
         event.preventDefault();
         this.temp = this.state.loc === "Faneuil Hall"
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             location: this.temp
         });

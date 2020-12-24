@@ -39,25 +39,37 @@ export default class Page2 extends Component {
 
     calPop = () => {
         this.setState({
-            cal_open: !this.state.cal_open
+            cal_open: !this.state.cal_open,
+            contacts_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     contactsPop = () => {
         this.setState({
-            contacts_open: !this.state.contacts_open
+            contacts_open: !this.state.contacts_open,
+            cal_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     notesPop = () => {
         this.setState({
-            notes_open: !this.state.notes_open
+            notes_open: !this.state.notes_open,
+            cal_open: false,
+            contacts_open: false,
+            help_open: false,
         });
     };
 
     helpPop = () => {
         this.setState({
-            help_open: !this.state.help_open
+            help_open: !this.state.help_open,
+            cal_open: false,
+            contacts_open: false,
+            notes_open: false,
         });
     };
 
@@ -88,6 +100,9 @@ export default class Page2 extends Component {
         console.log(this.state.phone_number)
         event.preventDefault();
         this.temp = ("6179165316" === this.state.phone_number)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             phone: this.temp,
         });
@@ -97,6 +112,9 @@ export default class Page2 extends Component {
         console.log(this.state.pass)
         event.preventDefault();
         this.temp = ("FAMILY" === this.state.pass) || ("family" === this.state.pass) || ("Family" === this.state.pass)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             computer: this.temp,
         });
@@ -104,8 +122,9 @@ export default class Page2 extends Component {
 
     check_slides = () => {
         this.temp = (this.state.slide1 === 2) && ((this.state.slide2 === 6) || (this.state.slide2 === 7)) && ((this.state.slide3 === 6) || (this.state.slide3 === 7)) && (this.state.slide4 === 1) && (this.state.slide5 === 3) && (this.state.slide6 === 0) && (this.state.slide7 === 4) && (this.state.slide8 === 5)
-        console.log(this.temp)
-        console.log(this.state.slide1)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             slides: this.temp
         });
@@ -190,7 +209,10 @@ export default class Page2 extends Component {
                         </form>
                     </div>
                     </div>
-                    : <button className="dull-button"><h3>Success</h3></button> }
+                    :
+                    <div align={"center"} style={{paddingTop: "2%"}}>
+                        <button className="dull-button"><h3>Success</h3></button>
+                    </div>}
                 <div align="center" >
                     {!this.state.computer ?
                         <div align="center">
@@ -206,28 +228,28 @@ export default class Page2 extends Component {
                                 <svg className="scaling-svg" viewBox="-20 -20 620 100">
                                     <rect x="20" y="0" width="50" height="50" className="click" stroke="white"
                                             onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})}/>
-                                    <text x="45" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide1]}</text>
+                                    <text x="45" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide1]}</text>
                                     <rect x="90" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})}/>
-                                    <text x="115" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide2]}</text>
+                                    <text x="115" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide2]}</text>
                                     <rect x="160" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide3: (this.state.slide3 + 1) % 8})}/>
-                                    <text x="185" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide3]}</text>
+                                    <text x="185" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide3: (this.state.slide3 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide3]}</text>
                                     <rect x="230" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide4: (this.state.slide4 + 1) % 8})}/>
-                                    <text x="255" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide4]}</text>
+                                    <text x="255" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide4: (this.state.slide4 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide4]}</text>
                                     <rect x="300" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide5: (this.state.slide5 + 1) % 8})}/>
-                                    <text x="325" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide5]}</text>
+                                    <text x="325" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide5: (this.state.slide5 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide5]}</text>
                                     <rect x="370" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide6: (this.state.slide6 + 1) % 8})}/>
-                                    <text x="395" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide6]}</text>
+                                    <text x="395" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide6: (this.state.slide6 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide6]}</text>
                                     <rect x="440" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide7: (this.state.slide7 + 1) % 8})}/>
-                                    <text x="465" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide7]}</text>
+                                    <text x="465" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide7: (this.state.slide7 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide7]}</text>
                                     <rect x="510" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide8: (this.state.slide8 + 1) % 8})}/>
-                                    <text x="535" y="25" fill="red" textAnchor="middle" alignmentBaseline="central">{this.state.letters[this.state.slide8]}</text>
+                                    <text x="535" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide8: (this.state.slide8 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide8]}</text>
                                 </svg>
                             </div>
                             {!this.state.slides ?

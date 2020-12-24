@@ -31,30 +31,45 @@ class Home extends Component {
 
     calPop = () => {
         this.setState({
-            cal_open: !this.state.cal_open
+            cal_open: !this.state.cal_open,
+            contacts_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     contactsPop = () => {
         this.setState({
-            contacts_open: !this.state.contacts_open
+            contacts_open: !this.state.contacts_open,
+            cal_open: false,
+            notes_open: false,
+            help_open: false,
         });
     };
 
     notesPop = () => {
         this.setState({
-            notes_open: !this.state.notes_open
+            notes_open: !this.state.notes_open,
+            cal_open: false,
+            contacts_open: false,
+            help_open: false,
         });
     };
 
     helpPop = () => {
         this.setState({
-            help_open: !this.state.help_open
+            help_open: !this.state.help_open,
+            cal_open: false,
+            contacts_open: false,
+            notes_open: false,
         });
     };
 
     check_part1 = () => {
         this.temp = (this.state.cir1 === 6) && (this.state.cir2 === 4) && (this.state.cir3 === 2) && (this.state.cir4 === 1)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             part1: this.temp
         });
@@ -81,6 +96,9 @@ class Home extends Component {
     check_part2 = (event) => {
         event.preventDefault();
         this.temp = ("524" === this.state.pt2_value)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
         this.setState({
             part2: this.temp,
             pt2_val: ""
