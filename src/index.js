@@ -17,6 +17,7 @@ class Home extends Component {
         notes: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/notes.png?raw=true",
         intro: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/intro-letter.png?raw=true",
         path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
+        help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
         colors: ["red", "blue", "green", "yellow", "orange", "purple", "white", "black"],
         cir1: 0,
         cir2: 0,
@@ -115,7 +116,7 @@ class Home extends Component {
                     {this.state.cal_open ? <PopUp title="Decemeber 2020" x="1840" y="1130" width="100%" image={this.state.cal} padding="62%" toggle={this.calPop} /> : null}
                     {this.state.contacts_open ? <PopUp title="Contact List" x="744" y="1164" width="60%" image={this.state.contacts} padding="96%" toggle={this.contactsPop} /> : null}
                     {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}
-                    {this.state.help_open ? <PopUp title="Help" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.helpPop} /> : null}
+                    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}
 
                 </div>
                 <h2 align="center" className="subheading">Hello Chris, First we need to confirm your identity. </h2>
@@ -181,7 +182,6 @@ class Home extends Component {
                     <button className="button" onClick={this.page2}><h3>Continue</h3></button>
                     : null}
                 </div>
-                <button className="button" onClick={this.page2}><h3>Continue</h3></button>
                 </body>
                 {/*<footer id="main-footer">*/}
                 {/*    <h3>Contact info?</h3>*/}

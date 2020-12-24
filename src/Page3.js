@@ -20,6 +20,7 @@ export default class Page3 extends Component {
         letter: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/phd-letter.png?raw=true",
         map: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/map.jpeg?raw=true",
         math: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/map-math.png?raw=true",
+        help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
         message: false,
         mess: ""
     };
@@ -104,7 +105,7 @@ export default class Page3 extends Component {
                     {this.state.cal_open ? <PopUp title="Decemeber 2020" x="1840" y="1130" width="100%" image={this.state.cal} padding="62%" toggle={this.calPop} /> : null}
                     {this.state.contacts_open ? <PopUp title="Contact List" x="744" y="1164" width="60%" image={this.state.contacts} padding="96%" toggle={this.contactsPop} /> : null}
                     {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}
-                    {this.state.help_open ? <PopUp title="Help" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.helpPop} /> : null}
+                    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}
 
                 </div>
                 <h2 align="center" className="subheading">Yay! You've finished presenting your thesis!</h2>

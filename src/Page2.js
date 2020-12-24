@@ -19,6 +19,7 @@ export default class Page2 extends Component {
         intro: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/intro-letter.png?raw=true",
         path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
         password: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/password.png?raw=true",
+        help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
         letters: ["A", "B", "C", "D", "E", "F", "G", "H"],
         phone_number: "",
         phone: false,
@@ -139,7 +140,7 @@ export default class Page2 extends Component {
                     {this.state.cal_open ? <PopUp title="Decemeber 2020" x="1840" y="1130" width="100%" image={this.state.cal} padding="62%" toggle={this.calPop} /> : null}
                     {this.state.contacts_open ? <PopUp title="Contact List" x="744" y="1164" width="60%" image={this.state.contacts} padding="96%" toggle={this.contactsPop} /> : null}
                     {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}
-                    {this.state.help_open ? <PopUp title="Help" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.helpPop} /> : null}
+                    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}
 
                 </div>
                 {!this.state.phone ?
@@ -234,10 +235,6 @@ export default class Page2 extends Component {
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                             : <button className="button" onClick={this.page3}><h3>Success!! Click to Continue</h3></button>}
                         </>}
-                </div>
-
-                <div align={"center"} style={{paddingBottom: "5%"}}>
-                        <button className="button" onClick={this.page3}><h3>Continue</h3></button>
                 </div>
 
                 </body>
