@@ -170,7 +170,7 @@ export default class Page2 extends Component {
                         <h2 align="center" className="subheading">Decode Password</h2>
                         <h3 align="center" className="subheading">Ali didn't want to send you his password directly, so she encrypted it below. See if you can crack it!</h3>
                         <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>
-                            <svg className="scaling-svg" viewBox={"0 0 718 644"}> {/* Needs
+                            <svg className="scaling-svg" viewBox={"0 0 718 270"}> {/* Needs
                          auto
                          updating*/}
                                 <image x={.3*718} width={"40%"} href={this.state.password}/>
