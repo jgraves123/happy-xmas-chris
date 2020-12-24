@@ -7,6 +7,10 @@ import Page2 from "./Page2";
 
 
 class Home extends Component {
+    componentDidMount(){
+        document.title = "Christmas Escape Room!"
+    }
+
     state = {
         cal_open: false,
         contacts_open: false,
