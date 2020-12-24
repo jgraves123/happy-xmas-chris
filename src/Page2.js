@@ -87,7 +87,7 @@ export default class Page2 extends Component {
     check_phone = (event) => {
         console.log(this.state.phone_number)
         event.preventDefault();
-        this.temp = ("617-916-5316" === this.state.phone_number)
+        this.temp = ("6179165316" === this.state.phone_number)
         this.setState({
             phone: this.temp,
         });
@@ -96,14 +96,14 @@ export default class Page2 extends Component {
     check_pass = (event) => {
         console.log(this.state.pass)
         event.preventDefault();
-        this.temp = ("FAMILY" === this.state.pass)
+        this.temp = ("FAMILY" === this.state.pass) || ("family" === this.state.pass) || ("Family" === this.state.pass)
         this.setState({
             computer: this.temp,
         });
     }
 
     check_slides = () => {
-        this.temp = (this.state.slide1 === 2) && (this.state.slide2 === 6) && (this.state.slide3 === 7) && (this.state.slide4 === 1) && (this.state.slide5 === 3) && (this.state.slide6 === 0) && (this.state.slide7 === 4) && (this.state.slide8 === 5)
+        this.temp = (this.state.slide1 === 2) && ((this.state.slide2 === 6) || (this.state.slide2 === 7)) && ((this.state.slide3 === 6) || (this.state.slide3 === 7)) && (this.state.slide4 === 1) && (this.state.slide5 === 3) && (this.state.slide6 === 0) && (this.state.slide7 === 4) && (this.state.slide8 === 5)
         console.log(this.temp)
         console.log(this.state.slide1)
         this.setState({
@@ -127,7 +127,6 @@ export default class Page2 extends Component {
                 <nav id="navbar">
                     <div className="container">
                         <ul>
-                            <li><a onClick = "window.location.reload();">Home</a></li>
                             <li><a onClick={this.calPop}>Calendar</a></li>
                             <li><a onClick={this.contactsPop}>Contacts</a></li>
                             <li><a onClick={this.notesPop}>Notes</a></li>
@@ -179,7 +178,7 @@ export default class Page2 extends Component {
                         </div>
                     </div>
                 }
-                {!this.computer ?
+                {!this.state.computer ?
                     <div align="center">
                     <div algin="center" style={{margin: "10", paddingBottom: "3%", width: "40%"}}>
                         <h3> Please enter Computer Password</h3>

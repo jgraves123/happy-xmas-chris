@@ -92,7 +92,6 @@ export default class Page4 extends Component {
                 <nav id="navbar">
                     <div className="container">
                         <ul>
-                            <li><a onClick = "window.location.reload();">Home</a></li>
                             <li><a onClick={this.calPop}>Calendar</a></li>
                             <li><a onClick={this.contactsPop}>Contacts</a></li>
                             <li><a onClick={this.notesPop}>Notes</a></li>
