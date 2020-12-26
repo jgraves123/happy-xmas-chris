@@ -186,7 +186,8 @@ class Home extends Component {
                     <div className="scaling-svg-container" style={{paddingBottom: "0%", display: "inline-block", width: "42%"}}>
                         {!this.state.part2 ?
                             <>
-                        <h2> How many possible paths (of length 12) did you have up to this point?</h2>
+                        <h2 style={{marginTop: "0%", marginBottom: "1%"}}> How many possible paths (of length 12) did you have up to this point?</h2>
+                                <h3 style={{marginTop: "0%", marginBottom: "0%"}}>Starting you out difficult, be sure to start small to find the pattern!</h3>
                         <form id="path-answer" onSubmit={this.check_part2}>
                             <label>
                                 <input type="text" value={this.state.pt2_value} placeholder="Number of Paths" onChange={this.handleChange} />

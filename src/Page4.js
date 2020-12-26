@@ -123,7 +123,7 @@ export default class Page4 extends Component {
 
                 </div>
                 <h1 align="center" className="subheading">Almost time to Celebrate!</h1>
-                <h2 align="center" className="subheading">It's December 23rd, and you made it to Stanford and back in time to celebrate Christmas! As you land in Boston though, you have a sinking feeling that you're forgetting something and wrack you mind to figure it out. Where are you supposed to go before leaving the city??</h2>
+                <h2 align="center" className="subheading">It's December 23rd, and you made it to Stanford and back in time to celebrate Christmas! As you land in Boston though, you have a sinking feeling that you're forgetting something and wrack your mind to figure it out. Where are you supposed to go before leaving the city??</h2>
                 {!this.state.location ?
                     <div align="center">
                         <div style={{width: "40%", paddingBottom: "5%"}}>

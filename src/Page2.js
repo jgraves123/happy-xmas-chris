@@ -187,7 +187,7 @@ export default class Page2 extends Component {
                     :
                     <div>
                         <h2 align="center" className="subheading">Decode Password</h2>
-                        <h3 align="center" className="subheading">Ali didn't want to send you his password directly, so she encrypted it below. See if you can crack it!</h3>
+                        <h3 align="center" className="subheading">Ali didn't want to send you her password directly, so she encrypted it below. See if you can crack it!</h3>
                         <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>
                             <svg className="scaling-svg" viewBox={"0 0 718 270"}> {/* Needs
                          auto
@@ -224,6 +224,7 @@ export default class Page2 extends Component {
                         </div>
                     :
                         <>
+                            <h2>Arrange your slides into the correct order:</h2>
                             <div className="scaling-svg-container" style={{paddingBottom: "15%"}}>
                                 <svg className="scaling-svg" viewBox="-20 -20 620 100">
                                     <rect x="20" y="0" width="50" height="50" className="click" stroke="white"
