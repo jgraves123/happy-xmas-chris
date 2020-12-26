@@ -166,7 +166,7 @@ export default class Page2 extends Component {
                         <div align="center" style={{width: "80%"}}>
                             <h2 align="center" className="subheading">Finishing Presentation</h2>
                             <h3 align="center" className="subheading">You need to finish up your
-                                presentation, but realize it isn't saved under you're account. Why
+                                presentation, but realize it isn't saved under your account. Why
                                 would that be?????</h3>
                             <h3 align="center" className="subheading">You realize it's because
                                 you've been loaning a computer, but you don't have the password.
